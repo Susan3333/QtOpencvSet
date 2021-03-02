@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QtStitcherDemo</class>
+ <widget class="QWidget" name="QtStitcherDemo">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>845</width>
+    <height>556</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QtStitcherDemo</string>
+  </property>
+  <widget class="QLabel" name="pic_show_1">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>50</y>
+     <width>240</width>
+     <height>150</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>请点击打开图像</string>
+   </property>
+   <property name="scaledContents">
+    <bool>false</bool>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pic_show_2">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>50</y>
+     <width>240</width>
+     <height>150</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>请点击打开图像</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pic_show_3">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>50</y>
+     <width>240</width>
+     <height>150</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>请点击打开图像</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="picOpenbutton">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>打开图片</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="picOpenbutton_2">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>0</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>图像融合</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pic_merge">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>230</y>
+     <width>761</width>
+     <height>301</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>融合结果展示区</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>picOpenbutton</sender>
+   <signal>clicked()</signal>
+   <receiver>QtStitcherDemo</receiver>
+   <slot>picOpenprocess()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>68</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>67</x>
+     <y>125</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>picOpenbutton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>QtStitcherDemo</receiver>
+   <slot>picStitcherProcess()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>152</x>
+     <y>14</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>215</x>
+     <y>11</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>picOpenprocess()</slot>
+  <slot>picStitcherProcess()</slot>
+ </slots>
+</ui>

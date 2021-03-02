@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4E27ADFA-5BFD-45E5-B2F2-D6E504440FA2}</ProjectGuid>
+    <Keyword>QtVS_v302</Keyword>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\Users\Administrator\source\repos\QtOpencvSet\QtOpencvSet\x64\Debug\uic;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\libSet\opencv_4.2.0_plus\x64\vc16\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LibraryPath>E:\libSet\opencv_4.2.0_plus\x64\vc16\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Administrator\source\repos\QtOpencvSet\QtOpencvSet\x64\Release\uic;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;gui;sql;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;gui;sql;widgets</QtModules>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalIncludeDirectories>F:\libSet\opencv_4.2.0_plus\include;F:\libSet\opencv_4.2.0_plus\include\opencv2;F:\libSet\vlc;F:\libSet\vlc\plugins;F:\libSet\HaiKang\库文件;F:\libSet;F:\libSet\HaiKang\库文件\HCNetSDKCom;F:\libSet\HaiKang\头文件;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>F:\libSet\opencv_4.2.0_plus\x64\vc16\lib;F:\libSet\vlc-3.0.0\sdk\lib;F:\libSet\CH-HCNetSDKV6.1.4.42_build20200527_win64\lib;F:\libSet\CH-HCNetSDKV6.1.4.42_build20200527_win64\lib\HCNetSDKCom;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_world420d.lib;opencv_aruco420.lib;opencv_bgsegm420.lib;opencv_bioinspired420.lib;opencv_calib3d420.lib;opencv_ccalib420.lib;opencv_core420.lib;opencv_datasets420.lib;opencv_dnn420.lib;opencv_dnn_objdetect420.lib;opencv_dnn_superres420.lib;opencv_dpm420.lib;opencv_face420.lib;opencv_features2d420.lib;opencv_flann420.lib;opencv_fuzzy420.lib;opencv_gapi420.lib;opencv_hfs420.lib;opencv_highgui420.lib;opencv_imgcodecs420.lib;opencv_imgproc420.lib;opencv_img_hash420.lib;opencv_img_hash420d.lib;opencv_line_descriptor420.lib;opencv_ml420.lib;opencv_objdetect420.lib;opencv_optflow420.lib;opencv_phase_unwrapping420.lib;opencv_photo420.lib;opencv_plot420.lib;opencv_quality420.lib;opencv_reg420.lib;opencv_rgbd420.lib;opencv_saliency420.lib;opencv_shape420.lib;opencv_stereo420.lib;opencv_stitching420.lib;opencv_structured_light420.lib;opencv_superres420.lib;opencv_surface_matching420.lib;opencv_text420.lib;opencv_tracking420.lib;opencv_video420.lib;opencv_videoio420.lib;opencv_videostab420.lib;opencv_world420.lib;opencv_xfeatures2d420.lib;opencv_ximgproc420.lib;opencv_xobjdetect420.lib;opencv_xphoto420.lib;GdiPlus.lib;HCCore.lib;HCNetSDK.lib;PlayCtrl.lib;HCAlarm.lib;HCGeneralCfgMgr.lib;HCPreview.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat />
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalIncludeDirectories>E:\libSet\opencv_4.2.0_plus\include;E:\libSet\opencv_4.2.0_plus\include\opencv2;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>opencv_world420.lib;opencv_aruco420.lib;opencv_bgsegm420.lib;opencv_bioinspired420.lib;opencv_calib3d420.lib;opencv_ccalib420.lib;opencv_core420.lib;opencv_datasets420.lib;opencv_dnn420.lib;opencv_dnn_objdetect420.lib;opencv_dnn_superres420.lib;opencv_dpm420.lib;opencv_face420.lib;opencv_features2d420.lib;opencv_flann420.lib;opencv_fuzzy420.lib;opencv_gapi420.lib;opencv_hfs420.lib;opencv_highgui420.lib;opencv_imgcodecs420.lib;opencv_imgproc420.lib;opencv_img_hash420.lib;opencv_img_hash420d.lib;opencv_line_descriptor420.lib;opencv_ml420.lib;opencv_objdetect420.lib;opencv_optflow420.lib;opencv_phase_unwrapping420.lib;opencv_photo420.lib;opencv_plot420.lib;opencv_quality420.lib;opencv_reg420.lib;opencv_rgbd420.lib;opencv_saliency420.lib;opencv_shape420.lib;opencv_stereo420.lib;opencv_stitching420.lib;opencv_structured_light420.lib;opencv_superres420.lib;opencv_surface_matching420.lib;opencv_text420.lib;opencv_tracking420.lib;opencv_video420.lib;opencv_videoio420.lib;opencv_videostab420.lib;opencv_xfeatures2d420.lib;opencv_ximgproc420.lib;opencv_xobjdetect420.lib;opencv_xphoto420.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:\libSet\opencv_4.2.0_plus\x64\vc16\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Gaussian_filter_UI.cpp" />
+    <ClCompile Include="HK.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="QtCameraStitcherDemo.cpp" />
+    <ClCompile Include="QtOpencvSet.cpp" />
+    <ClCompile Include="QtStitcherDemo.cpp" />
+    <ClCompile Include="QtVideoDemo.cpp" />
+    <ClCompile Include="QtVideoStitcherDemo.cpp" />
+    <ClCompile Include="vectorMat.cpp" />
+    <ClCompile Include="vectorMatWithStitcher.cpp" />
+    <ClCompile Include="vlc_reader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="QtOpencvSet.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="Gaussian_filter_UI.ui" />
+    <QtUic Include="QtCameraStitcherDemo.ui" />
+    <QtUic Include="QtOpencvSet.ui" />
+    <QtUic Include="QtStitcherDemo.ui" />
+    <QtUic Include="QtVideoDemo.ui" />
+    <QtUic Include="QtVideoStitcherDemo.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="QtOpencvSet.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="QtVideoStitcherDemo.h" />
+    <QtMoc Include="QtCameraStitcherDemo.h" />
+    <ClInclude Include="HK.h" />
+    <ClInclude Include="vectorMatWithStitcher.h" />
+    <ClInclude Include="vlc_reader.h" />
+    <ClInclude Include="x64\Debug\uic\ui_QtCameraStitcherDemo.h" />
+    <ClInclude Include="x64\Debug\uic\ui_QtVideoDemo.h" />
+    <ClInclude Include="x64\Debug\uic\ui_QtVideoStitcherDemo.h" />
+    <QtMoc Include="QtVideoDemo.h" />
+    <ClInclude Include="vectorMat.h" />
+    <ClInclude Include="x64\Debug\uic\ui_QtStitcherDemo.h" />
+    <QtMoc Include="Gaussian_filter_UI.h" />
+    <QtMoc Include="QtStitcherDemo.h" />
+    <ClInclude Include="x64\Debug\uic\ui_Gaussian_filter_UI.h" />
+    <ClInclude Include="x64\Debug\uic\ui_QtOpencvSet.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="QtOpencvSet.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

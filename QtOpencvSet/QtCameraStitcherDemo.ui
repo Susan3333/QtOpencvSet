@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QtCameraStitcherDemo</class>
+ <widget class="QWidget" name="QtCameraStitcherDemo">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1574</width>
+    <height>820</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QtCameraStitcherDemo</string>
+  </property>
+  <widget class="QLabel" name="label_12">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>599</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_16">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>130</y>
+     <width>231</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Progress info:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_2">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>310</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0.5</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>110</y>
+     <width>300</width>
+     <height>190</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_13">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>630</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Brightness adjustment:</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>259</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0.3</string>
+   </property>
+  </widget>
+  <widget class="QSlider" name="horizontalSlider_2">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>760</y>
+     <width>181</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>60</y>
+     <width>181</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>连接摄像头</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_5">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>310</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>流畅</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>高清</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>超清</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_11">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>450</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Warper_creator:</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+  </widget>
+  <widget class="QSlider" name="horizontalSlider">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>670</y>
+     <width>181</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>370</y>
+     <width>751</width>
+     <height>431</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>110</y>
+     <width>300</width>
+     <height>190</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>310</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>视频1</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>视频2</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>融合视频</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>310</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>物体检测开关</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>311</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Conf_thresh：</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_2">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>210</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>SURF</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>SIFT</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>AKAZE</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>ORB</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="comboBox_4">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>490</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>AffineWarper</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>PlaneWarper</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>CylindricalWarper</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>SphericalWarper</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>FisheyeWarper</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>StereographicWarper</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>CompressedRectilinearWarper_higher</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>CompressedRectilinearWarper_lower</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>CompressedRectilinearPortraitWarper_higher</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>CompressedRectilinearPortraitWarper_lower</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>PaniniWarper_higher</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>PaniniWarper_lower</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>PaniniPortraitWarper_higher</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>PaniniPortraitWarper_lower</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>MercatorWarper</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>TransverseMercatorWarper</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>360</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Adjuster:</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>70</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>视频2：</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>210</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Finder：</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>70</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>视频1：</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="progressBar">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>160</y>
+     <width>181</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>310</y>
+     <width>61</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>主控视频：</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_15">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>310</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>清晰度选择：</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_3">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>400</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>NoBundleAdjuster</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>BundleAdjusterReproj</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>BundleAdjusterRay</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>BundleAdjusterAffinePartial</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>550</y>
+     <width>181</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存融合图像</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>260</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Match_conf：</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_14">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>710</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Contrast adjustment:</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>780</x>
+     <y>310</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>面部检测开关</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_17">
+   <property name="geometry">
+    <rect>
+     <x>950</x>
+     <y>110</y>
+     <width>300</width>
+     <height>190</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_18">
+   <property name="geometry">
+    <rect>
+     <x>950</x>
+     <y>70</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>视频3：</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_19">
+   <property name="geometry">
+    <rect>
+     <x>1270</x>
+     <y>110</y>
+     <width>300</width>
+     <height>190</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_20">
+   <property name="geometry">
+    <rect>
+     <x>1270</x>
+     <y>70</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>视频4：</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+  </widget>
+  <zorder>label_12</zorder>
+  <zorder>label_16</zorder>
+  <zorder>lineEdit_2</zorder>
+  <zorder>label</zorder>
+  <zorder>label_13</zorder>
+  <zorder>lineEdit</zorder>
+  <zorder>horizontalSlider_2</zorder>
+  <zorder>pushButton</zorder>
+  <zorder>comboBox_5</zorder>
+  <zorder>label_11</zorder>
+  <zorder>horizontalSlider</zorder>
+  <zorder>label_2</zorder>
+  <zorder>comboBox</zorder>
+  <zorder>pushButton_3</zorder>
+  <zorder>label_9</zorder>
+  <zorder>comboBox_2</zorder>
+  <zorder>comboBox_4</zorder>
+  <zorder>label_10</zorder>
+  <zorder>label_5</zorder>
+  <zorder>label_7</zorder>
+  <zorder>label_4</zorder>
+  <zorder>progressBar</zorder>
+  <zorder>label_6</zorder>
+  <zorder>label_15</zorder>
+  <zorder>comboBox_3</zorder>
+  <zorder>pushButton_2</zorder>
+  <zorder>label_8</zorder>
+  <zorder>label_14</zorder>
+  <zorder>pushButton_4</zorder>
+  <zorder>label_17</zorder>
+  <zorder>label_18</zorder>
+  <zorder>label_19</zorder>
+  <zorder>label_20</zorder>
+  <zorder>label_3</zorder>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>pushButton</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>129</x>
+     <y>77</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>129</x>
+     <y>77</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>pushButton_2</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>556</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>556</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>horizontalSlider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>144</x>
+     <y>677</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>144</x>
+     <y>677</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_2</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>horizontalSlider_2</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>102</x>
+     <y>765</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>102</x>
+     <y>765</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>pushButton_3</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>673</x>
+     <y>325</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>673</x>
+     <y>325</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_5</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>comboBox_5</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>574</x>
+     <y>311</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>574</x>
+     <y>311</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>comboBox</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>408</x>
+     <y>310</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>408</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_3</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>comboBox_3</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>129</x>
+     <y>416</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>129</x>
+     <y>416</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_2</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>comboBox_2</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>190</x>
+     <y>224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>189</x>
+     <y>224</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>lineEdit</receiver>
+   <slot>setText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>224</x>
+     <y>272</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>224</x>
+     <y>272</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_2</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>lineEdit_2</receiver>
+   <slot>setText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>241</x>
+     <y>325</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>241</x>
+     <y>325</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_4</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>comboBox_4</receiver>
+   <slot>setCurrentText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>143</x>
+     <y>509</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>145</x>
+     <y>509</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

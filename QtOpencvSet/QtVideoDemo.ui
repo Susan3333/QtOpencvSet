@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QtVideoDemo</class>
+ <widget class="QWidget" name="QtVideoDemo">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>596</width>
+    <height>417</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QtVideoDemo</string>
+  </property>
+  <widget class="QPushButton" name="picOpenbutton">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>打开视频</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>40</y>
+     <width>541</width>
+     <height>351</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>picOpenbutton</sender>
+   <signal>clicked()</signal>
+   <receiver>QtVideoDemo</receiver>
+   <slot>videoOpenprocess()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>62</x>
+     <y>24</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>111</x>
+     <y>59</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>videoOpenprocess()</slot>
+ </slots>
+</ui>
